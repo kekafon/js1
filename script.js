@@ -65,9 +65,9 @@ var appData = {
     },
 
     chooseIncome: function () {
-        let items = prompt('Что принесет дополнительный доход? (Перечислите через азпятую)', '');
+        let items = prompt('Что принесет дополнительный доход? (Перечислите через запятую)', '');
         while (items == '' || typeof(items) != 'string' || items == 'null') {
-            items = prompt('Что принесет дополнительный доход? (Перечислите через азпятую)', '');
+            items = prompt('Что принесет дополнительный доход? (Перечислите через запятую)', '');
         }
 
         appData.income = items.split(', ');
