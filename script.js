@@ -1,3 +1,30 @@
+let startBtn = document.getElementById('start'),
+    budgetValue = document.getElementsByClassName('budget-value')[0],
+    dayBudgetValue = document.getElementsByClassName('daybudget-value')[0],
+    levelValue = document.getElementsByClassName('level-value')[0],
+    expensesValue = document.getElementsByClassName('expenses-value')[0],
+    optionalExpensesValue = document.getElementsByClassName('optionalexpenses-value')[0],
+    incomeValue = document.getElementsByClassName('income-value')[0],
+    monthSavingsValue = document.getElementsByClassName('monthsavings-value')[0],
+    yearSavingsValue = document.getElementsByClassName('yearsavings-value')[0],
+
+    expensesItem = document.getElementsByClassName('expenses-item'),
+    
+    btn = document.getElementsByTagName('button'),
+    expensesBtn = btn[0],
+    optionalExpensesmBtn = btn[1],
+    countBtn = btn[2];
+
+let optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item'),
+    incomeItem = document.querySelector('.choose-income'),
+    checkSavings = document.querySelector('#savings'),
+    sumValue = document.querySelector('#sum'),
+    percentValue = document.querySelector('#percent'),
+    yearValue = document.querySelector('.year'),
+    monthValue = document.querySelector('.month'),
+    dayValue = document.querySelector('.day');
+
+
 let money, time;
 
 var appData = {
@@ -82,12 +109,6 @@ var appData = {
 
 };
 
-console.log('Наша программа включает в себя данные:')
-for (let key in appData) {
-    console.log(key);
-}
-
-
 function start() {
     money = +prompt('Ваш бюджет на месяц?', '');
     time = prompt('Введите дату в формате YYYY-MM--DD', '');
@@ -98,5 +119,10 @@ function start() {
 
     appData.budget = money;
 }
-start();
+
+//console.log('Наша программа включает в себя данные:')
+//for (let key in appData) {
+    //console.log(key);
+//}
+
 
